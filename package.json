@@ -1,0 +1,20 @@
+{
+  "name": "data-source-widgets",
+  "version": "1.0.0",
+  "description": "datasource widgets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vega-widgets",
+    "datasource"
+  ],
+  "author": "Spenidl",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9"
+  }
+}
