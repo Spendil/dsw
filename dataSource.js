@@ -13,7 +13,7 @@ const getValueFrom = (o, s) => {
     return o;
 }
 
-export class dataSourceWidget {
+window.dataSourceWidget = class dataSourceWidget {
 	constructor(query, variables, displayed_data) {
 		this.query = query
 		this.variables = variables
