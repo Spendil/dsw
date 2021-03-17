@@ -14,15 +14,16 @@ const getValueFrom = (o, s) => {
 }
 
 window.dataSourceWidget = class dataSourceWidget {
-	constructor(query, variables, displayed_data) {
+	constructor(query, variables, displayed_data, key) {
 		this.query = query
 		this.variables = variables
 		this.displayed_data = displayed_data
+		this.key = key
 		this.setupData = function(json) {
 			return ('data' in json) ? getValueFrom(json.data, this.displayed_data) : null
 		}
-		this.fetcher = function(key) {
-			let keyHeader = {'X-API-KEY': key}
+		this.fetcher = function() {
+			let keyHeader = {'X-API-KEY': this.key}
 			return fetch(
 				'https://graphql.bitquery.io',
 				{
